@@ -520,3 +520,21 @@ footer small {
     }
 
 }
+
+.informacion-negocio {
+    background: white;
+    padding: 14px 16px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+.informacion-negocio p {
+    font-size: 14px;
+    color: #57534e;
+    margin: 6px 0;
+}
+
+.informacion-negocio strong {
+    color: #292524;
+}
