@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menú | Mega Crunch</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="logo">
+            <img src="imagenes/logo.jpeg" alt="Logo Mega Crunch">
+        </div>
+        <h1>MEGA CRUNCH</h1>
+        <p class="subtitulo">Comida callejera</p>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor">
+        <!-- ESTADO DEL NEGOCIO -->
+        <section class="estado">
+            <span class="punto"></span>
+            <div>
+                <strong>ABIERTO</strong>
+                <p>Estamos atendiendo</p>
+            </div>
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- HAMBURGUESAS -->
+        <!-- ========================= -->
+        <section class="categoria">
+            <button
+                class="boton-categoria boton-principal"
+                onclick="alternarCategoria('hamburguesas')">
+                <span>🍔 Hamburguesas</span>
+                <span
+                    class="flecha flecha-principal"
+                    id="flecha-hamburguesas">
+                    +
+                </span>
+            </button>
+
+            <div
+                class="contenido-principal"
+                id="hamburguesas">
+                <img
+                    src="imagenes/hamburguesa.jpg"
+                    alt="Hamburguesas"
+                    class="imagen-categoria">
+                <p class="nota-categoria">
+                    +$15 papas a la francesa
+                </p>
+
+                <div class="productos">
+                    <article class="producto">
+                        <div>
+                            <h3>CLÁSICA</h3>
+                            <p>
+                                Capa de mayonesa, lechuga china,
+                                carne, queso amarillo, jitomate,
+                                cebolla
+                            </p>
+                        </div>
+                        <strong class="precio">$55</strong>
+                    </article>
+
+                    <article class="producto">
+                        <div>
+                            <h3>HAWAIANA</h3>
+                            <p>
+                                Capa de mayonesa, carne,
+                                queso gratinado, jamón frito,
+                                piña, jitomate, cebolla
+                            </p>
+                        </div>
+                        <strong class="precio">$65</strong>
+                    </article>
+
+                    <article class="producto">
+                        <div>
+                            <h3>EXPLOSIVA</h3>
+                            <p>
+                                Capa de mayonesa, lechuga china,
+                                carne, salchicha, jamón frito,
+                                tocino, queso amarillo, jitomate,
+                                cebolla
+                            </p>
+                        </div>
+                        <strong class="precio">$75</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- HOT DOG -->
+        <!-- ========================= -->
+        <section class="categoria">
+            <button
+                class="boton-categoria boton-principal"
+                onclick="alternarCategoria('hotdog')">
+                <span>🌭 Hot Dog</span>
+                <span
+                    class="flecha flecha-principal"
+                    id="flecha-hotdog">
+                    +
+                </span>
+            </button>
+
+            <div
+                class="contenido-principal"
+                id="hotdog">
+                <img
+                    src="imagenes/hotdog.jpg"
+                    alt="Hot Dog"
+                    class="imagen-categoria">
+                <p class="nota-categoria">
+                    +$15 papas a la francesa
+                </p>
+
+                <div class="productos">
+                    <article class="producto">
+                        <div>
+                            <h3>SENCILLO</h3>
+                            <p>
+                                Salchicha de pavo, jitomate,
+                                cebolla y aderezos
+                            </p>
+                        </div>
+                        <strong class="precio">$30</strong>
+                    </article>
+
+                    <article class="producto">
+                        <div>
+                            <h3>HAWAIANO</h3>
+                            <p>
+                                Salchicha de pavo, jamón frito,
+                                queso gratinado, piña, jitomate,
+                                cebolla y aderezos
+                            </p>
+                        </div>
+                        <strong class="precio">$45</strong>
+                    </article>
+
+                    <article class="producto">
+                        <div>
+                            <h3>EXPLOSIVO</h3>
+                            <p>
+                                Salchicha de pavo, jamón frito,
+                                tocino, queso gratinado, jitomate,
+                                cebolla y aderezos
+                            </p>
+                        </div>
+                        <strong class="precio">$55</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- PAPAS -->
+        <!-- ========================= -->
+        <section class="categoria">
+            <button
+                class="boton-categoria boton-principal"
+                onclick="alternarCategoria('papas')">
+                <span>🍟 Papas a la francesa</span>
+                <span
+                    class="flecha flecha-principal"
+                    id="flecha-papas">
+                    +
+                </span>
+            </button>
+
+            <div
+                class="contenido-principal"
+                id="papas">
+                <img
+                    src="imagenes/papas.jpg"
+                    alt="Papas a la francesa"
+                    class="imagen-categoria">
+                <div class="productos">
+                    <article class="producto">
+                        <div>
+                            <h3>PAPAS A LA FRANCESA</h3>
+                            <p>
+                                Catsup, mayonesa, queso amarillo
+                                y salsa
+                            </p>
+                        </div>
+                        <strong class="precio">$45</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- NACHOS -->
+        <!-- ========================= -->
+        <section class="categoria">
+            <button
+                class="boton-categoria boton-principal"
+                onclick="alternarCategoria('nachos')">
+                <span>🧀 Nachos</span>
+                <span
+                    class="flecha flecha-principal"
+                    id="flecha-nachos">
+                    +
+                </span>
+            </button>
+
+            <div
+                class="contenido-principal"
+                id="nachos">
+                <img src="imagenes/nachos.jpg" alt="Nachos" class="imagen-categoria">
+                <div class="productos">
+                    <article class="producto">
+                        <div>
+                            <h3>NACHOS</h3>
+                            <p>
+                                Frijoles, queso amarillo y rajas
+                            </p>
+                        </div>
+                        <strong class="precio">$45</strong>
+                    </article>
+
+                    <article class="producto">
+                        <div>
+                            <h3>SUPER NACHOS</h3>
+                            <p>
+                                Ojuela, frijoles, queso amarillo,
+                                carne asada, cebolla, jitomate y rajas
+                            </p>
+                        </div>
+                        <strong class="precio">$65</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- CREPAS -->
+        <!-- ========================= -->
+        <section class="categoria">
+            <button
+                class="boton-categoria boton-principal"
+                onclick="alternarCategoria('crepas')">
+                <span>🥞 Crepas</span>
+                <span
+                    class="flecha flecha-principal"
+                    id="flecha-crepas">
+                    +
+                </span>
+            </button>
+
+            <div
+                class="contenido-principal"
+                id="crepas">
+                <img src="imagenes/crepas.jpg" alt="Crepas" class="imagen-categoria">
+                <div class="productos">
+                    <article class="producto">
+                        <div>
+                            <h3>CLÁSICA</h3>
+                            <p>
+                                1 ingrediente a elegir:
+                                Lechera, Mermelada o Miel
+                            </p>
+                            <p class="extra">
+                                +$10 con fruta
+                            </p>
+                        </div>
+                        <strong class="precio">$35</strong>
+                    </article>
+
+                    <article class="producto">
+                        <div>
+                            <h3>FAVORITA</h3>
+                            <p>
+                                2 ingredientes a elegir:
+                                Cajeta, Nutella, Mermelada,
+                                Lechera, Miel, Hershey's
+                            </p>
+                            <p class="extra">
+                                +$10 con fruta
+                            </p>
+                        </div>
+                        <strong class="precio">$45</strong>
+                    </article>
+
+                    <article class="producto">
+                        <div>
+                            <h3>TENTACIÓN</h3>
+                            <p>
+                                3 ingredientes a elegir:
+                                Queso Philadelphia, Nutella,
+                                Cajeta, Dulce de leche,
+                                Mermelada, Lechera, Miel,
+                                Hershey's
+                            </p>
+                            <p class="extra">
+                                +$10 con fruta
+                            </p>
+                        </div>
+                        <strong class="precio">$65</strong>
+                    </article>
+
+                    <article class="producto">
+                        <div>
+                            <h3>HAWAIANA</h3>
+                            <p>
+                                Queso gratinado, jamón de pavo
+                                y piña
+                            </p>
+                        </div>
+                        <strong class="precio">$65</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- WAFFLES -->
+        <!-- ========================= -->
+        <section class="categoria">
+            <button
+                class="boton-categoria boton-principal"
+                onclick="alternarCategoria('waffles')">
+                <span>🧇 Waffles</span>
+                <span
+                    class="flecha flecha-principal"
+                    id="flecha-waffles">
+                    +
+                </span>
+            </button>
+
+            <div
+                class="contenido-principal"
+                id="waffles">
+                <img src="imagenes/waffles.jpg" alt="Waffles" class="imagen-categoria">
+                <div class="productos">
+                    <article class="producto">
+                        <div>
+                            <h3>SENCILLO</h3>
+                            <p>
+                                2 piezas + 2 ingredientes a elegir:
+                                Lechera, Mermelada, Nutella,
+                                Cajeta, Miel.
+                            </p>
+                        </div>
+                        <strong class="precio">$40</strong>
+                    </article>
+
+                    <article class="producto">
+                        <div>
+                            <h3>ESPECIAL</h3>
+                            <p>
+                                2 piezas con una bola de helado,
+                                fruta y un topping a elegir
+                            </p>
+                        </div>
+                        <strong class="precio">$75</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- MINI HOT HOTCAKES -->
+        <!-- ========================= -->
+        <section class="categoria">
+            <button
+                class="boton-categoria boton-principal"
+                onclick="alternarCategoria('hotcakes')">
+                <span>🥞 Mini Hot Hotcakes</span>
+                <span
+                    class="flecha flecha-principal"
+                    id="flecha-hotcakes">
+                    +
+                </span>
+            </button>
+
+            <div
+                class="contenido-principal"
+                id="hotcakes">
+                <img src="imagenes/hotcakes.jpg" alt="Mini Hot Hotcakes" class="imagen-categoria">
+                <div class="productos">
+                    <article class="producto">
+                        <div>
+                            <h3>PAQUETITO</h3>
+                            <p>
+                                10 piezas + 2 dulces a elegir:
+                                Mermelada, Lechera, Nutella,
+                                Hershey's // una fruta a elegir
+                            </p>
+                        </div>
+                        <strong class="precio">$65</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- POSTRES -->
+        <!-- ========================= -->
+        <section class="categoria">
+            <button
+                class="boton-categoria boton-principal"
+                onclick="alternarCategoria('postres')">
+                <span>🍰 Postres</span>
+                <span
+                    class="flecha flecha-principal"
+                    id="flecha-postres">
+                    +
+                </span>
+            </button>
+
+            <div
+                class="contenido-principal"
+                id="postres">
+                <img src="imagenes/postres.jpg" alt="Postres" class="imagen-categoria">
+                <div class="productos">
+                    <article class="producto">
+                        <div>
+                            <h3>CHISKEY DE FRESA</h3>
+                            <p>
+                                Base de galleta, con relleno de
+                                queso crema, fresa y chantilly
+                            </p>
+                        </div>
+                        <strong class="precio">$35</strong>
+                    </article>
+
+                    <article class="producto">
+                        <div>
+                            <h3>CHISKEY DE ZARZAMORA</h3>
+                            <p>
+                                Base de galleta, con relleno de
+                                queso crema, zarzamora y chantilly
+                            </p>
+                        </div>
+                        <strong class="precio">$35</strong>
+                    </article>
+
+                    <article class="producto">
+                        <div>
+                            <h3>PAY DE LIMÓN</h3>
+                            <p>
+                                Base de galleta, relleno cremoso
+                                de limón, decorado con jugosas
+                                rodajas de durazno
+                            </p>
+                        </div>
+                        <strong class="precio">$40</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- BEBIDAS -->
+        <!-- ========================= -->
+        <section class="categoria">
+            <button
+                class="boton-categoria boton-principal"
+                onclick="alternarCategoria('bebidas')">
+                <span>🥤 Bebidas</span>
+                <span
+                    class="flecha flecha-principal"
+                    id="flecha-bebidas">
+                    +
+                </span>
+            </button>
+
+            <div
+                class="contenido-principal"
+                id="bebidas">
+                <img
+                    src="imagenes/bebidas.jpg"
+                    alt="Bebidas"
+                    class="imagen-categoria">
+
+                <!-- ================= -->
+                <!-- CAFÉ -->
+                <!-- ================= -->
+                <div class="subcategoria">
+                    <button
+                        class="boton-subcategoria"
+                        onclick="alternarSubcategoria('cafe')">
+                        <span>☕ Café</span>
+                        <span
+                            class="flecha flecha-subcategoria"
+                            id="flecha-cafe">
+                            +
+                        </span>
+                    </button>
+
+                    <div
+                        class="contenido-subcategoria"
+                        id="cafe">
+                        <div class="productos">
+                            <article class="producto">
+                                <div>
+                                    <h3>AMERICANO</h3>
+                                </div>
+                                <strong class="precio">$30</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>CREMOSO</h3>
+                                    <p>
+                                        Café especial, crema y leche
+                                    </p>
+                                </div>
+                                <strong class="precio">$45</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>LECHERO</h3>
+                                    <p>
+                                        Café especial y un toque
+                                        de leche evaporada
+                                    </p>
+                                </div>
+                                <strong class="precio">$45</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>CAPUCHINO</h3>
+                                </div>
+                                <strong class="precio">$55</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>CAPUCHINO VAINILLA</h3>
+                                    <p>
+                                        Café especial, cremoso
+                                        con un toque de vainilla
+                                    </p>
+                                </div>
+                                <strong class="precio">$55</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>MOKA</h3>
+                                    <p>
+                                        Café especial, cremoso,
+                                        con un toque de chocolate
+                                    </p>
+                                </div>
+                                <strong class="precio">$55</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>CARLOS V</h3>
+                                    <p>
+                                        Café especial, cremoso,
+                                        leche evaporada, con
+                                        chocolate Carlos V
+                                    </p>
+                                </div>
+                                <strong class="precio">$65</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>MAZAPAN</h3>
+                                    <p>
+                                        Café especial, cremoso,
+                                        leche evaporada, con
+                                        dulce mazapán
+                                    </p>
+                                </div>
+                                <strong class="precio">$65</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>CREMINO</h3>
+                                    <p>
+                                        Café especial, cremoso,
+                                        leche evaporada, con
+                                        dulce cremo
+                                    </p>
+                                </div>
+                                <strong class="precio">$65</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>AVELLANA</h3>
+                                    <p>
+                                        Café especial, cremoso,
+                                        leche evaporada, con
+                                        avellana
+                                    </p>
+                                </div>
+                                <strong class="precio">$65</strong>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ================= -->
+                <!-- TÉ -->
+                <!-- ================= -->
+                <div class="subcategoria">
+                    <button
+                        class="boton-subcategoria"
+                        onclick="alternarSubcategoria('te')">
+                        <span>🫖 Té</span>
+                        <span
+                            class="flecha flecha-subcategoria"
+                            id="flecha-te">
+                            +
+                        </span>
+                    </button>
+
+                    <div
+                        class="contenido-subcategoria"
+                        id="te">
+                        <div class="productos">
+                            <article class="producto">
+                                <div>
+                                    <h3>TÉ DE LIMÓN</h3>
+                                </div>
+                                <strong class="precio">$25</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>TÉ DE MANZANILLA</h3>
+                                </div>
+                                <strong class="precio">$25</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>TÉ DE MANGO KIWI</h3>
+                                </div>
+                                <strong class="precio">$30</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>TÉ DE FRUTOS ROJOS</h3>
+                                </div>
+                                <strong class="precio">$30</strong>
+                            </article>
+
+                            <article class="producto">
+                                <div>
+                                    <h3>TÉ DIJESTIVO</h3>
+                                </div>
+                                <strong class="precio">$30</strong>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ================= -->
+                <!-- MALTEADAS -->
+                <!-- ================= -->
+                <div class="subcategoria">
+                    <button
+                        class="boton-subcategoria"
+                        onclick="alternarSubcategoria('malteadas')">
+                        <span>🥛 Malteadas</span>
+                        <span
+                            class="flecha flecha-subcategoria"
+                            id="flecha-malteadas">
+                            +
+                        </span>
+                    </button>
+
+                    <div
+                        class="contenido-subcategoria"
+                        id="malteadas">
+                        <div class="productos">
+                            <article class="producto">
+                                <div>
+                                    <p>
+                                        Sabores: Fresa, Plátano
+                                        y Chocolate
+                                    </p>
+                                </div>
+                                <strong class="precio">$45</strong>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>Gracias por visitarnos ❤️</p>
+        <small>
+            Menú digital · Mega Crunch
+        </small>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+
+</html>
