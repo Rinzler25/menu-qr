@@ -24,11 +24,11 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main class="contenedor">
         <!-- ESTADO DEL NEGOCIO -->
-        <section class="estado">
-            <span class="punto"></span>
+        <section class="estado" id="estado-negocio">
+            <span class="punto" id="punto-estado"></span>
             <div>
-                <strong>ABIERTO</strong>
-                <p>Estamos atendiendo</p>
+                <strong id="texto-estado">CARGANDO...</strong>
+                <p id="mensaje-estado">Verificando horario...</p>
             </div>
         </section>
 
@@ -39,12 +39,29 @@
         </div>
 
         <div class="informacion-negocio">
-            <h5> SERVICIO A DOMICILIO</h5>
-            <h6> Pregunte por el menu del dia</h6>
+            <h4> SERVICIO A DOMICILIO</h4>
+            <h5> Pregunte por el menú del día</h5>
             <p>📞 <strong>Teléfono:</strong> 22-25-31-90-23</p>
             <p>📞 <strong>Teléfono:</strong> 22-12-88-98-56</p>
+
         </div>
 
+        <div class="informacion-negocio">
+            <p>📍 <strong>Ubicación:</strong></p>
+            <p>Sobre Av. Mercurio, frente a Calle Venus</p>
+            <p>Rincón Arboledas, 72460</p>
+            <p class="referencia">Junto a la caseta blanca</p>
+
+            <a
+                href="https://maps.app.goo.gl/Gx3DyRVDVod8c4Cd6"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="boton-ubicacion"
+            >
+                🗺️ Ver cómo llegar
+            </a>
+        </div>
+        
 
         <!-- ========================= -->
         <!-- HAMBURGUESAS -->
@@ -732,9 +749,6 @@
     <!-- PIE DE PÁGINA -->
     <footer>
         <p>Gracias por visitarnos ❤️</p>
-        <small>
-            Menú digital · Mega Crunch
-        </small>
     </footer>
 
     <!-- JAVASCRIPT -->

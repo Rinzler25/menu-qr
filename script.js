@@ -125,3 +125,144 @@ function alternarSubcategoria(id) {
 
     flechaSeleccionada.classList.add("abierta");
 }
+
+/* =========================
+   HORARIO DEL NEGOCIO
+========================= */
+
+function actualizarEstadoNegocio() {
+
+    const ahora = new Date();
+
+    const dia = ahora.getDay();
+    const hora = ahora.getHours();
+    const minutos = ahora.getMinutes();
+
+    const horaActual = hora * 60 + minutos;
+
+    // Horario:
+    // Viernes, sábado y domingo
+    // 6:45 PM - 11:30 PM
+
+    const apertura = 18 * 60 + 45; // 6:45 PM
+    const cierre = 23 * 60 + 30;   // 11:30 PM
+
+    const estado = document.getElementById("estado-negocio");
+    const punto = document.getElementById("punto-estado");
+    const texto = document.getElementById("texto-estado");
+    const mensaje = document.getElementById("mensaje-estado");
+
+
+    /* =========================
+       VIERNES, SÁBADO Y DOMINGO
+    ========================= */
+
+    const diaDeAtencion =
+        dia === 0 ||
+        dia === 5 ||
+        dia === 6;
+
+
+    /* =========================
+       DÍAS SIN SERVICIO
+    ========================= */
+
+    if (!diaDeAtencion) {
+
+        texto.textContent = "CERRADO";
+
+        if (dia === 4) {
+
+            // Jueves
+            mensaje.textContent =
+                "Abrimos mañana a las 6:45 PM";
+
+        } else {
+
+            // Lunes, martes y miércoles
+            mensaje.textContent =
+                "Abrimos el próximo viernes a las 6:45 PM";
+        }
+
+        estado.style.borderLeftColor = "#dc2626";
+        punto.style.background = "#dc2626";
+
+        return;
+    }
+
+
+    /* =========================
+       ANTES DE ABRIR
+    ========================= */
+
+    if (horaActual < apertura) {
+
+        texto.textContent = "CERRADO";
+
+        if (dia === 5) {
+
+            // Viernes antes de las 6:45 PM
+            mensaje.textContent =
+                "Abrimos hoy a las 6:45 PM";
+
+        } else {
+
+            // Sábado o domingo antes de las 6:45 PM
+            mensaje.textContent =
+                "Abrimos hoy a las 6:45 PM";
+        }
+
+        estado.style.borderLeftColor = "#dc2626";
+        punto.style.background = "#dc2626";
+
+        return;
+    }
+
+
+    /* =========================
+       ABIERTO
+    ========================= */
+
+    if (horaActual <= cierre) {
+
+        texto.textContent = "ABIERTO";
+        mensaje.textContent = "Estamos atendiendo";
+
+        estado.style.borderLeftColor = "#25a244";
+        punto.style.background = "#25a244";
+
+        return;
+    }
+
+
+    /* =========================
+       DESPUÉS DE CERRAR
+    ========================= */
+
+    texto.textContent = "CERRADO";
+
+    if (dia === 5 || dia === 6) {
+
+        mensaje.textContent =
+            "Abrimos mañana a las 6:45 PM";
+
+    } else {
+
+        mensaje.textContent =
+            "Abrimos el próximo viernes a las 6:45 PM";
+    }
+
+    estado.style.borderLeftColor = "#dc2626";
+    punto.style.background = "#dc2626";
+}
+
+
+/* =========================
+   ACTUALIZAR ESTADO
+========================= */
+
+// Al abrir la página
+actualizarEstadoNegocio();
+
+// Revisar cada minuto
+setInterval(actualizarEstadoNegocio, 60000);
