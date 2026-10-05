@@ -145,7 +145,7 @@ function actualizarEstadoNegocio() {
     // 6:45 PM - 11:30 PM
 
     const apertura = 18 * 60 + 45; // 6:45 PM
-    const cierre = 22 * 60;   // 11:30 PM
+    const cierre = 22 * 60 + 50;   // 11:30 PM
 
     const estado = document.getElementById("estado-negocio");
     const punto = document.getElementById("punto-estado");
