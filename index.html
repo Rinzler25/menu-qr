@@ -17,7 +17,7 @@
             <img src="imagenes/logo.jpeg" alt="Logo Mega Crunch">
         </div>
         <h1>MEGA CRUNCH</h1>
-        <p class="subtitulo">Comida callejera</p>
+        <p class="subtitulo">Antojitos, Comida callejera y Postres </p>
     </header>
 
 
@@ -32,18 +32,31 @@
             </div>
         </section>
 
-        
         <div class="informacion-negocio">
             <p>📅 <strong>Atención:</strong> Viernes · Sábado · Domingo</p>
-            <p>🕐 <strong>Horario:</strong> 7:00 PM - 11:30 PM</p>
+            <h5> HORARIO DE ATENCION</h5>
+            <p>🕐 <strong>Viernes y sábado:</strong> 6:45 PM - 11:30 PM</p>
+            <p>🕐 <strong>Domingo:</strong> 6:30 PM - 10:30 PM</p>
         </div>
 
-        <div class="informacion-negocio">
-            <h4> SERVICIO A DOMICILIO</h4>
-            <h5> Pregunte por el menú del día</h5>
-            <p>📞 <strong>Teléfono:</strong> 22-25-31-90-23</p>
-            <p>📞 <strong>Teléfono:</strong> 22-12-88-98-56</p>
 
+        <div class="informacion-negocio">
+            <h4> SERVICIO A DOMICILIO</h4> 
+            <h5> Pregunte por el menú del día</h5>
+            <p>📞 <strong>WhatsApp🟢:</strong> 22-25-31-90-23</p>
+            <p>📞 <strong>WhatsApp🟢:</strong> 22-12-88-98-56</p>
+
+        </div>
+    
+        <div class="metodos-pago">
+            <h4>Métodos de pago</h4>
+            <p>💵 Efectivo</p>
+            <p>📱 Transferencia bancaria</p>
+            <div class="datos-transferencia"> 
+                <p><strong>Banco:</strong> NuBank</p> 
+                <p><strong>Nombre:</strong> Aranza Isabel Rebollo Carbajal</p> 
+                <p><strong>Cuenta:</strong> 5101 2578 1337 5006</p> 
+            </div>
         </div>
 
         <div class="informacion-negocio">
@@ -234,10 +247,10 @@
             </div>
         </section>
 
+
         <!-- ========================= -->
         <!-- NACHOS -->
         <!-- ========================= -->
-        <!--
         <section class="categoria">
             <button
                 class="boton-categoria boton-principal"
@@ -279,7 +292,7 @@
             </div>
         </section>
 
--->
+
         <!-- ========================= -->
         <!-- CREPAS -->
         <!-- ========================= -->
@@ -443,50 +456,51 @@
             </div>
         </section>
 
-<!-- BANDERILLAS -->
-<button
-    class="boton-categoria"
-    onclick="alternarCategoria('banderillas')"
->
-    <span>🌭 Banderillas</span>
-    <span class="flecha flecha-principal" id="flecha-banderillas">+</span>
-</button>
+        <!-- ========================= -->
+        <!-- BANDERILLA -->
+        <!-- ========================= -->
+        <section class="categoria">
+            <button
+                class="boton-categoria"
+                onclick="alternarCategoria('banderillas')"
+                >
+                <span>🌭 Banderillas</span>
+                <span class="flecha flecha-principal" id="flecha-banderillas">+</span>
+            </button>
 
-<div
-    class="contenido-principal"
-    id="banderillas"
->
-    <img
-        src="imagenes/banderillas.jpg"
-        alt="Banderillas"
-        class="imagen-categoria"
-    >
+            <div
+                class="contenido-principal"
+                id="banderillas"
+                >
+                <img
+                    src="imagenes/banderillas.jpg"
+                    alt="Banderillas"
+                    class="imagen-categoria"
+                >
 
-    <div class="nota-categoria">
-        + $15 papas a la francesa
-    </div>
+                <div class="nota-categoria">
+                    + $15 papas a la francesa
+                </div>
 
-    <div class="productos">
+                <div class="productos">
 
-        <div class="producto">
-            <div>
-                <h3>BANDERILLAS CLÁSICAS DE LA FERIA</h3>
-
-                <p>
-                    Crujientes salchichas de pavo cuidadosamente
-                    insertadas en brocheta, capeadas al momento
-                    con nuestra receta secreta de masa dulce y
-                    fritas a la perfección dorada. Servidas con
-                    un toque de cátsup, mostaza y aderezo especial
-                    de la casa.
-                </p>
+                    <div class="producto">
+                        <div>
+                            <h3>BANDERILLAS CLÁSICAS DE LA FERIA</h3>
+                            <p>
+                                Crujientes salchichas de pavo cuidadosamente
+                                insertadas en brocheta, capeadas al momento
+                                con nuestra receta secreta de masa dulce y
+                                fritas a la perfección dorada. Servidas con
+                                un toque de cátsup, mostaza.
+                            </p>
+                        </div>
+                        <strong class="precio">$40</strong>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <strong class="precio">$40</strong>
-        </div>
-
-    </div>
-</div>
         <!-- ========================= -->
         <!-- POSTRES -->
         <!-- ========================= -->
@@ -505,9 +519,9 @@
             <div
                 class="contenido-principal"
                 id="postres">
-                <img src="imagenes/postres.jpg" alt="Postres" class="imagen-categoria">
+                <img src="imagenes/postres.png" alt="Postres" class="imagen-categoria">
                 <div class="productos">
-                  <!-- <article class="producto">
+                    <article class="producto">
                         <div>
                             <h3>CHISKEY DE FRESA</h3>
                             <p>
@@ -516,20 +530,20 @@
                             </p>
                         </div>
                         <strong class="precio">$35</strong>
-                    </article> -->
+                    </article>
 
                     <article class="producto">
                         <div>
-                            <h3>CHISKEY DE FRAMBUESA</h3>
+                            <h3>CHISKEY DE ZARZAMORA</h3>
                             <p>
                                 Base de galleta, con relleno de
-                                queso crema, frambuesa y chantilly
+                                queso crema, zarzamora y chantilly
                             </p>
                         </div>
                         <strong class="precio">$35</strong>
                     </article>
 
-                <!--    <article class="producto">
+                    <article class="producto">
                         <div>
                             <h3>PAY DE LIMÓN</h3>
                             <p>
@@ -539,7 +553,19 @@
                             </p>
                         </div>
                         <strong class="precio">$40</strong>
-                    </article > -->
+                    </article>
+
+                    <article class="producto">
+                        <div>
+                            <h3>FLAN NAPOLITANO</h3>
+                            <p>
+                               Delicioso flan napolitano de textura suave 
+                               y cremosa, bañado con un dulce caramelo que 
+                               le da el toque perfecto.
+                            </p>
+                        </div>
+                        <strong class="precio">$45</strong>
+                    </article>
                 </div>
             </div>
         </section>

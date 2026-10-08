@@ -130,130 +130,56 @@ function alternarSubcategoria(id) {
    HORARIO DEL NEGOCIO
 ========================= */
 
+
 function actualizarEstadoNegocio() {
-
     const ahora = new Date();
+    const dia = ahora.getDay(); // Domingo = 0, viernes = 5, sábado = 6
+    const minutos = ahora.getHours() * 60 + ahora.getMinutes();
 
-    const dia = ahora.getDay();
-    const hora = ahora.getHours();
-    const minutos = ahora.getMinutes();
-
-    const horaActual = hora * 60 + minutos;
-
-    // Horario:
-    // Viernes, sábado y domingo
-    // 6:45 PM - 11:30 PM
-
-    const apertura = 18 * 60 + 45; // 6:45 PM
-    const cierre = 22 * 60 + 50;   // 11:30 PM
-
-    const estado = document.getElementById("estado-negocio");
-    const punto = document.getElementById("punto-estado");
     const texto = document.getElementById("texto-estado");
     const mensaje = document.getElementById("mensaje-estado");
+    const punto = document.getElementById("punto-estado");
+    const estado = document.getElementById("estado-negocio");
 
+    let abierto = false;
+    let mensajeCerrado = "";
 
-    /* =========================
-       VIERNES, SÁBADO Y DOMINGO
-    ========================= */
+    const viernesYSabado = dia === 5 || dia === 6;
+    const domingo = dia === 0;
 
-    const diaDeAtencion =
-        dia === 0 ||
-        dia === 5 ||
-        dia === 6;
+    if (viernesYSabado) {
+        abierto = minutos >= 18 * 60 + 45 && minutos < 23 * 60 + 30;
 
-
-    /* =========================
-       DÍAS SIN SERVICIO
-    ========================= */
-
-    if (!diaDeAtencion) {
-
-        texto.textContent = "CERRADO";
-
-        if (dia === 4) {
-
-            // Jueves
-            mensaje.textContent =
-                "Abrimos mañana a las 6:45 PM";
-
+        if (minutos < 18 * 60 + 45) {
+            mensajeCerrado = "Abrimos hoy a las 6:45 PM";
         } else {
-
-            // Lunes, martes y miércoles
-            mensaje.textContent =
-                "Abrimos el próximo viernes a las 6:45 PM";
+            mensajeCerrado = dia === 5
+                ? "Abrimos mañana a las 6:45 PM"
+                : "Abrimos mañana a las 6:30 PM";
         }
+    } else if (domingo) {
+        abierto = minutos >= 18 * 60 + 30 && minutos < 22 * 60 + 30;
 
-        estado.style.borderLeftColor = "#dc2626";
-        punto.style.background = "#dc2626";
-
-        return;
+        mensajeCerrado = minutos < 18 * 60 + 30
+            ? "Abrimos hoy a las 6:30 PM"
+            : "Abrimos el próximo viernes a las 7:00 PM";
+    } else {
+        mensajeCerrado = dia === 4
+            ? "Abrimos mañana a las 6:45 PM"
+            : "Abrimos el próximo viernes a las 6:45 PM";
     }
 
-
-    /* =========================
-       ANTES DE ABRIR
-    ========================= */
-
-    if (horaActual < apertura) {
-
-        texto.textContent = "CERRADO";
-
-        if (dia === 5) {
-
-            // Viernes antes de las 6:45 PM
-            mensaje.textContent =
-                "Abrimos hoy a las 6:45 PM";
-
-        } else {
-
-            // Sábado o domingo antes de las 6:45 PM
-            mensaje.textContent =
-                "Abrimos hoy a las 6:45 PM";
-        }
-
-        estado.style.borderLeftColor = "#dc2626";
-        punto.style.background = "#dc2626";
-
-        return;
-    }
-
-
-    /* =========================
-       ABIERTO
-    ========================= */
-
-    if (horaActual <= cierre) {
-
+    if (abierto) {
         texto.textContent = "ABIERTO";
         mensaje.textContent = "Estamos atendiendo";
-
-        estado.style.borderLeftColor = "#25a244";
-        punto.style.background = "#25a244";
-
-        return;
-    }
-
-
-    /* =========================
-       DESPUÉS DE CERRAR
-    ========================= */
-
-    texto.textContent = "CERRADO";
-
-    if (dia === 5 || dia === 6) {
-
-        mensaje.textContent =
-            "Abrimos mañana a las 6:45 PM";
-
+        punto.style.backgroundColor = "#25A244";
+        estado.style.borderColor = "#25A244";
     } else {
-
-        mensaje.textContent =
-            "Abrimos el próximo viernes a las 6:45 PM";
+        texto.textContent = "CERRADO";
+        mensaje.textContent = mensajeCerrado;
+        punto.style.backgroundColor = "#DC2626";
+        estado.style.borderColor = "#DC2626";
     }
-
-    estado.style.borderLeftColor = "#dc2626";
-    punto.style.background = "#dc2626";
 }
 
 

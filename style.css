@@ -581,3 +581,27 @@ footer small {
 .boton-ubicacion:active {
     transform: scale(0.97);
 }
+
+.metodos-pago {
+    margin-top: 15px;
+    padding: 12px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.metodos-pago h3 {
+    color: #ea580c;
+    margin: 0 0 10px;
+}
+
+.metodos-pago p {
+    margin: 6px 0;
+}
+
+.nota-pago {
+    margin-top: 10px !important;
+    color: #78716c;
+    font-size: 13px;
+}
