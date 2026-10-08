@@ -32,9 +32,20 @@
             </div>
         </section>
 
+        <div class="metodos-pago">
+            <h4>Métodos de pago</h4>
+            <p>💵 Efectivo</p>
+            <p>📱 Transferencia bancaria</p>
+            <div class="datos-transferencia"> 
+                <p><strong>Banco:</strong> NuBank</p> 
+                <p><strong>Nombre:</strong> Aranza Isabel Rebollo Carbajal</p> 
+                <p><strong>Cuenta:</strong> 5101 2578 1337 5006</p> 
+            </div>
+        </div>
+
         <div class="informacion-negocio">
             <p>📅 <strong>Atención:</strong> Viernes · Sábado · Domingo</p>
-            <h5> HORARIO DE ATENCION</h5>
+            <h4> Horario </h4>
             <p>🕐 <strong>Viernes y sábado:</strong> 6:45 PM - 11:30 PM</p>
             <p>🕐 <strong>Domingo:</strong> 6:30 PM - 10:30 PM</p>
         </div>
@@ -46,17 +57,6 @@
             <p>📞 <strong>WhatsApp🟢:</strong> 22-25-31-90-23</p>
             <p>📞 <strong>WhatsApp🟢:</strong> 22-12-88-98-56</p>
 
-        </div>
-    
-        <div class="metodos-pago">
-            <h4>Métodos de pago</h4>
-            <p>💵 Efectivo</p>
-            <p>📱 Transferencia bancaria</p>
-            <div class="datos-transferencia"> 
-                <p><strong>Banco:</strong> NuBank</p> 
-                <p><strong>Nombre:</strong> Aranza Isabel Rebollo Carbajal</p> 
-                <p><strong>Cuenta:</strong> 5101 2578 1337 5006</p> 
-            </div>
         </div>
 
         <div class="informacion-negocio">
@@ -209,6 +209,52 @@
             </div>
         </section>
 
+        
+        <!-- ========================= -->
+        <!-- BANDERILLA -->
+        <!-- ========================= -->
+        <section class="categoria">
+            <button
+                class="boton-categoria"
+                onclick="alternarCategoria('banderillas')"
+                >
+                <span>🌭 Banderillas</span>
+                <span class="flecha flecha-principal" id="flecha-banderillas">+</span>
+            </button>
+
+            <div
+                class="contenido-principal"
+                id="banderillas"
+                >
+                <img
+                    src="imagenes/banderillas.jpg"
+                    alt="Banderillas"
+                    class="imagen-categoria"
+                >
+
+                <div class="nota-categoria">
+                    + $15 papas a la francesa
+                </div>
+
+                <div class="productos">
+
+                    <div class="producto">
+                        <div>
+                            <h3>BANDERILLAS CLÁSICAS DE LA FERIA</h3>
+                            <p>
+                                Crujientes salchichas de pavo cuidadosamente
+                                insertadas en brocheta, capeadas al momento
+                                con nuestra receta secreta de masa dulce y
+                                fritas a la perfección dorada. Servidas con
+                                un toque de cátsup, mostaza.
+                            </p>
+                        </div>
+                        <strong class="precio">$40</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- ========================= -->
         <!-- PAPAS -->
@@ -311,7 +357,12 @@
             <div
                 class="contenido-principal"
                 id="crepas">
-                <img src="imagenes/crepas.jpg" alt="Crepas" class="imagen-categoria">
+                <img src="imagenes/crepas.jpg" 
+                    alt="Crepas" 
+                    class="imagen-categoria">
+                    <p class="nota-categoria">
+                    Puedes añadir algun topping "Azucar Glass, Chispas de chocolate, Nuez o Granola"
+                </p>
                 <div class="productos">
                     <article class="producto">
                         <div>
@@ -439,7 +490,12 @@
             <div
                 class="contenido-principal"
                 id="hotcakes">
-                <img src="imagenes/hotcakes.jpg" alt="Mini Hot Hotcakes" class="imagen-categoria">
+                <img src="imagenes/hotcakes.jpg" 
+                alt="Mini Hot Hotcakes" 
+                class="imagen-categoria">
+                <p class="nota-categoria">
+                    Puedes incluir de dulce: "Azucar Glass, Chispas de chocolate, Nuez o Granola"
+                </p>
                 <div class="productos">
                     <article class="producto">
                         <div>
@@ -447,7 +503,7 @@
                             <p>
                                 10 piezas + 2 dulces a elegir:
                                 Mermelada, Lechera, Nutella,
-                                Hershey's // una fruta a elegir
+                                Hershey's + fruta a elegir.
                             </p>
                         </div>
                         <strong class="precio">$65</strong>
@@ -456,50 +512,6 @@
             </div>
         </section>
 
-        <!-- ========================= -->
-        <!-- BANDERILLA -->
-        <!-- ========================= -->
-        <section class="categoria">
-            <button
-                class="boton-categoria"
-                onclick="alternarCategoria('banderillas')"
-                >
-                <span>🌭 Banderillas</span>
-                <span class="flecha flecha-principal" id="flecha-banderillas">+</span>
-            </button>
-
-            <div
-                class="contenido-principal"
-                id="banderillas"
-                >
-                <img
-                    src="imagenes/banderillas.jpg"
-                    alt="Banderillas"
-                    class="imagen-categoria"
-                >
-
-                <div class="nota-categoria">
-                    + $15 papas a la francesa
-                </div>
-
-                <div class="productos">
-
-                    <div class="producto">
-                        <div>
-                            <h3>BANDERILLAS CLÁSICAS DE LA FERIA</h3>
-                            <p>
-                                Crujientes salchichas de pavo cuidadosamente
-                                insertadas en brocheta, capeadas al momento
-                                con nuestra receta secreta de masa dulce y
-                                fritas a la perfección dorada. Servidas con
-                                un toque de cátsup, mostaza.
-                            </p>
-                        </div>
-                        <strong class="precio">$40</strong>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- ========================= -->
         <!-- POSTRES -->
@@ -743,35 +755,35 @@
                         <div class="productos">
                             <article class="producto">
                                 <div>
-                                    <h3>TÉ DE LIMÓN</h3>
+                                    <h3>Limón</h3>
                                 </div>
                                 <strong class="precio">$25</strong>
                             </article>
 
                             <article class="producto">
                                 <div>
-                                    <h3>TÉ DE MANZANILLA</h3>
+                                    <h3>Manzanilla</h3>
                                 </div>
                                 <strong class="precio">$25</strong>
                             </article>
 
                             <article class="producto">
                                 <div>
-                                    <h3>TÉ DE MANGO KIWI</h3>
+                                    <h3>Mango Kiwi</h3>
                                 </div>
                                 <strong class="precio">$30</strong>
                             </article>
 
                             <article class="producto">
                                 <div>
-                                    <h3>TÉ DE FRUTOS ROJOS</h3>
+                                    <h3>Frutos Rojos</h3>
                                 </div>
                                 <strong class="precio">$30</strong>
                             </article>
 
                             <article class="producto">
                                 <div>
-                                    <h3>TÉ DIJESTIVO</h3>
+                                    <h3>Dijestivo</h3>
                                 </div>
                                 <strong class="precio">$30</strong>
                             </article>
