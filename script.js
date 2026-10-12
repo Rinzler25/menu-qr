@@ -158,7 +158,7 @@ function actualizarEstadoNegocio() {
                 : "Abrimos mañana a las 6:30 PM";
         }
     } else if (domingo) {
-        abierto = minutos >= 18 * 60 + 30 && minutos < 22 * 60 + 30;
+        abierto = minutos >= 18 * 60 + 30 && minutos < 22 * 60 + 20;
 
         mensajeCerrado = minutos < 18 * 60 + 30
             ? "Abrimos hoy a las 6:30 PM"
