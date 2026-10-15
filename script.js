@@ -130,10 +130,9 @@ function alternarSubcategoria(id) {
    HORARIO DEL NEGOCIO
 ========================= */
 
-
 function actualizarEstadoNegocio() {
     const ahora = new Date();
-    const dia = ahora.getDay(); // Domingo = 0, viernes = 5, sábado = 6
+    const dia = ahora.getDay(); // Domingo = 0, jueves = 4
     const minutos = ahora.getHours() * 60 + ahora.getMinutes();
 
     const texto = document.getElementById("texto-estado");
@@ -141,54 +140,39 @@ function actualizarEstadoNegocio() {
     const punto = document.getElementById("punto-estado");
     const estado = document.getElementById("estado-negocio");
 
-    let abierto = false;
-    let mensajeCerrado = "";
+    const diasApertura = [4, 5, 6]; // Jueves, viernes y sábado
+    const apertura = 18 * 60 + 30;       // 7:00 PM
+    const cierre = 23 * 60 + 30;    // 11:30 PM
 
-    const viernesYSabado = dia === 5 || dia === 6;
-    const domingo = dia === 0;
-
-    if (viernesYSabado) {
-        abierto = minutos >= 18 * 60 + 45 && minutos < 23 * 60 + 30;
-
-        if (minutos < 18 * 60 + 45) {
-            mensajeCerrado = "Abrimos hoy a las 6:45 PM";
-        } else {
-            mensajeCerrado = dia === 5
-                ? "Abrimos mañana a las 6:45 PM"
-                : "Abrimos mañana a las 6:30 PM";
-        }
-    } else if (domingo) {
-        abierto = minutos >= 18 * 60 + 30 && minutos < 22 * 60 + 20;
-
-        mensajeCerrado = minutos < 18 * 60 + 20
-            ? "Abrimos hoy a las 6:30 PM"
-            : "Abrimos el próximo viernes a las 7:00 PM";
-    } else {
-        mensajeCerrado = dia === 4
-            ? "Abrimos mañana a las 6:45 PM"
-            : "Abrimos el próximo viernes a las 6:45 PM";
-    }
+    const abierto =
+        diasApertura.includes(dia) &&
+        minutos >= apertura &&
+        minutos < cierre;
 
     if (abierto) {
         texto.textContent = "ABIERTO";
         mensaje.textContent = "Estamos atendiendo";
         punto.style.backgroundColor = "#25A244";
         estado.style.borderColor = "#25A244";
+        return;
+    }
+
+    texto.textContent = "CERRADO";
+    punto.style.backgroundColor = "#DC2626";
+    estado.style.borderColor = "#DC2626";
+
+    if (dia === 4 || dia === 5) {
+        mensaje.textContent = minutos < apertura
+            ? "Abrimos hoy a las 6:30 PM"
+            : "Abrimos mañana a las 6:30 PM";
+    } else if (dia === 6 && minutos >= cierre) {
+        mensaje.textContent = "Abrimos el próximo jueves a las 6:30 PM";
+    } else if (dia === 0 || dia === 1 || dia === 2 || dia === 3) {
+        mensaje.textContent = "Abrimos el próximo jueves a las 6:30 PM";
     } else {
-        texto.textContent = "CERRADO";
-        mensaje.textContent = mensajeCerrado;
-        punto.style.backgroundColor = "#DC2626";
-        estado.style.borderColor = "#DC2626";
+        mensaje.textContent = "Abrimos hoy a las 6:30 PM";
     }
 }
 
-
-/* =========================
-   ACTUALIZAR ESTADO
-========================= */
-
-// Al abrir la página
 actualizarEstadoNegocio();
-
-// Revisar cada minuto
 setInterval(actualizarEstadoNegocio, 60000);
