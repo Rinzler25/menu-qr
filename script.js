@@ -142,7 +142,7 @@ function actualizarEstadoNegocio() {
 
     const diasApertura = [4, 5, 6]; // Jueves, viernes y sábado
     const apertura = 18 * 60 + 30;       // 7:00 PM
-    const cierre = 23 * 60 + 08;    // 11:30 PM
+    const cierre = 23 * 60 + 10;    // 11:30 PM
 
     const abierto =
         diasApertura.includes(dia) &&
