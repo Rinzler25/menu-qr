@@ -682,3 +682,78 @@ footer small {
     }
 
 }
+
+/* ==============================
+   COMBOS PARA EL FRÍO
+============================== */
+
+.categoria-frio {
+    margin-top: 18px;
+}
+
+/* BOTÓN CON EL MISMO TAMAÑO QUE LOS DEMÁS COMBOS */
+
+.categoria-frio .boton-principal {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+
+    background: linear-gradient(135deg, #6f3e2e, #3b241d);
+    color: #fff8ed;
+
+    border: 2px solid #9b674c;
+    border-radius: 15px;
+
+    padding: 23px 45px;
+
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    box-shadow: 0 5px 14px rgba(59, 36, 29, 0.25);
+}
+
+.categoria-frio .boton-principal:hover {
+    background: linear-gradient(135deg, #80503b, #4b2d23);
+}
+
+.categoria-frio .flecha-principal {
+    position: absolute;
+    right: 15px;
+    color: #fff8ed;
+}
+
+/* GALERÍA */
+
+.galeria-frio {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 12px 0;
+}
+
+.imagen-frio {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 13px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* EXPANSIÓN DEL CONTENIDO */
+
+.categoria-frio .contenido-principal.abierto {
+    max-height: 6000px;
+    opacity: 1;
+    padding: 5px 10px 15px;
+}
+
+/* DOS COLUMNAS EN PANTALLAS GRANDES */
+
+@media (min-width: 600px) {
+    .galeria-frio {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}
