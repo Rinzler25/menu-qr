@@ -141,8 +141,8 @@ function actualizarEstadoNegocio() {
     const estado = document.getElementById("estado-negocio");
 
     const diasApertura = [4, 5, 6]; // Jueves, viernes y sábado
-    const apertura = 18 * 60;       // 7:00 PM
-    const cierre = 23 * 60;    // 11:30 PM
+    const apertura = 17 * 60 + 40;       // 5:40 PM
+    const cierre = 23 * 60 + 15;    // 11:15 PM
 
     const abierto =
         diasApertura.includes(dia) &&
@@ -163,14 +163,14 @@ function actualizarEstadoNegocio() {
 
     if (dia === 4 || dia === 5) {
         mensaje.textContent = minutos < apertura
-            ? "Abrimos hoy a las 6:30 PM"
-            : "Abrimos mañana a las 6:30 PM";
+            ? "Abrimos hoy a las 5:40 PM"
+            : "Abrimos mañana a las 5:40 PM";
     } else if (dia === 6 && minutos >= cierre) {
-        mensaje.textContent = "Abrimos el próximo jueves a las 6:30 PM";
+        mensaje.textContent = "Abrimos el próximo jueves a las 5:40 PM";
     } else if (dia === 0 || dia === 1 || dia === 2 || dia === 3) {
-        mensaje.textContent = "Abrimos el próximo jueves a las 6:30 PM";
+        mensaje.textContent = "Abrimos el próximo jueves a las 5:40 PM";
     } else {
-        mensaje.textContent = "Abrimos hoy a las 6:30 PM";
+        mensaje.textContent = "Abrimos hoy a las 5:40 PM";
     }
 }
 
