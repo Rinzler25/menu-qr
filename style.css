@@ -648,15 +648,15 @@ footer small {
 .galeria-combos {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 18px;
     padding: 12px 0;
+    width: 100%;
 }
 
 .imagen-combo {
     display: block;
     width: 100%;
     height: auto;
-
     object-fit: contain;
 
     border-radius: 13px;
@@ -664,24 +664,24 @@ footer small {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 }
 
-/* Permitir mostrar todas las imágenes */
+/* MOSTRAR TODAS LAS IMÁGENES */
 
-.contenido-subcategoria.combos-galeria.abierto {
-    max-height: 6000px;
+.contenido-principal.combos-galeria.abierto {
+    max-height: 30000px;
     opacity: 1;
-    padding: 5px 10px 15px;
+    padding: 5px 10px 20px;
+    overflow: visible;
 }
 
-/* Dos columnas en pantallas grandes */
+/* DOS COLUMNAS EN PANTALLAS GRANDES */
 
 @media (min-width: 600px) {
-
     .galeria-combos {
         grid-template-columns: repeat(2, 1fr);
         gap: 18px;
     }
-
 }
+
 
 /* ==============================
    COMBOS PARA EL FRÍO
